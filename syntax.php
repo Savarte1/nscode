@@ -98,8 +98,8 @@ class syntax_plugin_nscode extends SyntaxPlugin
                 );
                 $bbparser = $configurator->finalize();
 
-                $xml  = $bbparser[parser]->parse($match);
-                $html = $bbparser[renderer]->render($xml);
+                $xml  = $bbparser["parser"]->parse($match);
+                $html = $bbparser["renderer"]->render($xml);
                 $renderer->doc .= $html; 
                 break;
             case DOKU_LEXER_EXIT:     
