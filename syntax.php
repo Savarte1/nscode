@@ -68,6 +68,7 @@ class syntax_plugin_nscode extends SyntaxPlugin
 
             case DOKU_LEXER_UNMATCHED:
                 $configurator = new s9e\TextFormatter\Configurator;
+                $configurator->rootRules->enableAutoLineBreaks();
                 $configurator->BBCodes->addFromRepository('B');
                 $configurator->BBCodes->addFromRepository('I');
                 $configurator->BBCodes->addFromRepository('U');
