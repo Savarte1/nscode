@@ -96,10 +96,10 @@ class syntax_plugin_nscode extends SyntaxPlugin
                     '[box]{TEXT}[/box]',
                     '<div style="border: 1px solid #000">{TEXT}</div>'
                 );
-                extract($configurator->finalize());
+                $bbparser = $configurator->finalize();
 
-                $xml  = $parser->parse($match);
-                $html = $renderer->render($xml);
+                $xml  = $bbparser[parser]->parse($match);
+                $html = $bbparser[renderer]->render($xml);
                 $renderer->doc .= $html; 
                 break;
             case DOKU_LEXER_EXIT:     
