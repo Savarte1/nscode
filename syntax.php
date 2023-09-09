@@ -95,7 +95,7 @@ class syntax_plugin_nscode extends SyntaxPlugin
                 );
                 $configurator->BBCodes->addCustom(
                     '[box]{TEXT}[/box]',
-                    '<div style="border: 1px solid #000; padding: 5px; margin-bottom: 10px;">{TEXT}</div>'
+                    '<div style="border: 1px solid #000; padding: 15px; margin: 10px;">{TEXT}</div>'
                 );
                 $bbparser = $configurator->finalize();
 
